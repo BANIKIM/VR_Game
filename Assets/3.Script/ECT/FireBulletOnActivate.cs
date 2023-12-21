@@ -19,7 +19,7 @@ public class FireBulletOnActivate : MonoBehaviour
     }
 
 
-    public void FireBullet(ActivateEventArgs arg)
+    public void FireBullet(ActivateEventArgs arg = null)
     {
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
