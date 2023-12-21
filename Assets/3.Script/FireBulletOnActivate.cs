@@ -8,6 +8,8 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet; //ÃÑ¾Ë
     public Transform spawnPoint; // ÃÑ¾Ë³ª°¡´Â °÷
     public float fireSpeed = 20f; // ÃÑ¾Ë ¼Óµµ
+    public AudioSource source; //ÃÑ¼Ò¸®
+    public AudioClip clip;
 
 
     private void Start()
@@ -23,5 +25,6 @@ public class FireBulletOnActivate : MonoBehaviour
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
         Destroy(spawnedBullet, 5);
+        source.PlayOneShot(clip);
     }
 }
