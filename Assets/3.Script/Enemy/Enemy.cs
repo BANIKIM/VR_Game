@@ -75,6 +75,7 @@ public class Enemy : MonoBehaviour
         Vector3 playerHeadPosition = playerHead.position - Random.Range(0, 0.4f) * Vector3.up;
         gun.spawnPoint.forward = (playerHeadPosition - gun.spawnPoint.position).normalized;
         gun.FireBullet();
+        gun.bullets++;
     }
 
 

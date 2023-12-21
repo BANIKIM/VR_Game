@@ -9,7 +9,9 @@ public class FireBulletOnActivate : MonoBehaviour
     public Transform spawnPoint; // ÃÑ¾Ë³ª°¡´Â °÷
     public float fireSpeed = 20f; // ÃÑ¾Ë ¼Óµµ
     public AudioSource source; //ÃÑ¼Ò¸®
-    public AudioClip clip;
+    public AudioClip Shootclip;
+    public AudioClip Clickclip;
+    public int bullets = 12;
 
 
     private void Start()
@@ -21,10 +23,20 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs arg = null)
     {
-        GameObject spawnedBullet = Instantiate(bullet);
-        spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        Destroy(spawnedBullet, 5);
-        source.PlayOneShot(clip);
+        if(bullets>0)
+        {
+            GameObject spawnedBullet = Instantiate(bullet);
+            spawnedBullet.transform.position = spawnPoint.position;
+            spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+            Destroy(spawnedBullet, 5);
+            source.PlayOneShot(Shootclip);
+            bullets--;
+        }
+        else
+        {
+            source.PlayOneShot(Clickclip);
+
+        }
+
     }
 }
