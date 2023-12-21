@@ -220,7 +220,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09726696, y: -0.057784498, z: -0.000000024800435}
+  m_ConnectedAnchor: {x: 0.09726749, y: -0.057784498, z: 0.00000023596989}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -687,6 +687,7 @@ GameObject:
   - component: {fileID: 6687726512655144325}
   - component: {fileID: 6687726512655144326}
   - component: {fileID: 3555668362512387551}
+  - component: {fileID: 5076766277485883061}
   m_Layer: 0
   m_Name: LowManRightForeArm
   m_TagString: Untagged
@@ -751,7 +752,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000008638018, y: 0.0000015413764, z: 0.25175825}
+  m_ConnectedAnchor: {x: 0.00000084145006, y: 0.00000034928325, z: 0.2517585}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -799,6 +800,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Weapon
   enemy: {fileID: 5768823072254821671}
+--- !u!114 &5076766277485883061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555668362512387550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a35fb08b958aa14cb8306250d4c26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 4592072028438228815}
 --- !u!1 &4011331756631038507
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +890,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.16318905, y: -0.000000048875812, z: 0.22039483}
+  m_ConnectedAnchor: {x: 0.16319022, y: 0.0000004279614, z: 0.22039483}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -967,6 +981,7 @@ GameObject:
   - component: {fileID: 6687726513359868988}
   - component: {fileID: 6687726513359868989}
   - component: {fileID: 4320076879565004276}
+  - component: {fileID: 1705493438063387600}
   m_Layer: 0
   m_Name: LowManRightLeg
   m_TagString: Untagged
@@ -1079,6 +1094,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Weapon
   enemy: {fileID: 5768823072254821671}
+--- !u!114 &1705493438063387600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320076879565004275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a35fb08b958aa14cb8306250d4c26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 7129145492562544336}
 --- !u!1 &4523227348358036533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1326,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000013038527, y: 0.21156126, z: -0.0000008707673}
+  m_ConnectedAnchor: {x: 0.0000001376914, y: 0.21156126, z: -0.00000037483804}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1693,6 +1721,7 @@ GameObject:
   - component: {fileID: 6687726512709207544}
   - component: {fileID: 6687726512709207545}
   - component: {fileID: 5933073084902068435}
+  - component: {fileID: 122215809255223028}
   m_Layer: 0
   m_Name: LowManLeftForeArm
   m_TagString: Untagged
@@ -1757,7 +1786,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000009988436, y: 0.0000005555153, z: 0.251758}
+  m_ConnectedAnchor: {x: 0.0000010011719, y: 0.0000003468991, z: 0.25175843}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1805,6 +1834,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Weapon
   enemy: {fileID: 5768823072254821671}
+--- !u!114 &122215809255223028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933073084902068434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a35fb08b958aa14cb8306250d4c26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 5004580551193546697}
 --- !u!1 &6687726513901695335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,7 +2126,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1631898, y: -0.0000006449223, z: 0.22039483}
+  m_ConnectedAnchor: {x: -0.16319034, y: -0.00000037670142, z: 0.22039483}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2321,7 +2363,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09726778, y: -0.057784498, z: 0.0000009740764}
+  m_ConnectedAnchor: {x: -0.097267576, y: -0.057784498, z: 0.000000012951503}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2446,6 +2488,7 @@ GameObject:
   - component: {fileID: 6687726512615659725}
   - component: {fileID: 6687726512615659726}
   - component: {fileID: 7473532500968601211}
+  - component: {fileID: 12929121853722444}
   m_Layer: 0
   m_Name: LowManLeftLeg
   m_TagString: Untagged
@@ -2558,6 +2601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Weapon
   enemy: {fileID: 5768823072254821671}
+--- !u!114 &12929121853722444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473532500968601210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a35fb08b958aa14cb8306250d4c26be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 2497025487830463609}
 --- !u!1 &7488247018588400409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2758,7 +2814,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000506678, y: -0.0000006747246, z: 0.39749086}
+  m_ConnectedAnchor: {x: -0.00000024475378, y: -0.00000031709675, z: 0.39749086}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3206,7 +3262,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 6687726514038541481}
   fireSpeed: 20
   source: {fileID: 6687726512795711422}
-  clip: {fileID: 8300000, guid: ef793b64b74deaf488c6a468f54f6d50, type: 3}
+  Shootclip: {fileID: 8300000, guid: ef793b64b74deaf488c6a468f54f6d50, type: 3}
+  Clickclip: {fileID: 8300000, guid: 085d5bfc76c505246abb968f34e34ded, type: 3}
   bullets: 8
 --- !u!114 &6687726512795711421
 MonoBehaviour:
