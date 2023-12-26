@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3865659175659366168}
   - component: {fileID: 8206522391570700775}
   - component: {fileID: 4098477287553640582}
+  - component: {fileID: -4027560128794737737}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Weapon
@@ -378,3 +379,15 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-4027560128794737737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213385983699397486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51230409d17425c4c8e3047d45f3568e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,7 +11,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public AudioSource source; //ÃÑ¼Ò¸®
     public AudioClip Shootclip;
     public AudioClip Clickclip;
-    public int bullets = 12;
+    public int bullets = 8;
 
 
     private void Start()
@@ -28,7 +28,7 @@ public class FireBulletOnActivate : MonoBehaviour
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-            Destroy(spawnedBullet, 5);
+            Destroy(spawnedBullet, 3);
             source.PlayOneShot(Shootclip);
             bullets--;
         }
