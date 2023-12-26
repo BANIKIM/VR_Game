@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/1.Scene/Menu.unity
+    guid: afcdec5fd0592544caa1360b30417f5d
+  - enabled: 1
+    path: Assets/1.Scene/SciFi_Warehouse.unity
+    guid: 69e59c71622f4b249a331d85e80598b3
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 548dd1739cd4d4149a338e06e6995cb6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d4d27e857f9a82644a6e1a132c9bc760, type: 2}

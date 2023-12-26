@@ -8,6 +8,7 @@ TagManager:
   - Right Hand
   - Weapon
   - Enemy
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Player
   - Interactable
-  - 
+  - Bullet
   - 
   - 
   - 
