@@ -10,7 +10,7 @@ public class SliceObject : MonoBehaviour
     public GameObject target;
     public bool slice = false; //자를까요?
     public Material crossSectionMaterial;
-    
+    public float cutForce = 1500;
 
     private void Start()
     {
@@ -35,7 +35,9 @@ public class SliceObject : MonoBehaviour
         if(hull != null)
         {
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);//CreateUpperHull(자를오브젝트,단면도 머테리얼)
+            SetupSlicedComponent(upperHull);
             GameObject loverHull = hull.CreateLowerHull(target, crossSectionMaterial);//자른 밑부분
+            SetupSlicedComponent(loverHull);
 
             Destroy(target);
         }
@@ -44,7 +46,10 @@ public class SliceObject : MonoBehaviour
 
     public void SetupSlicedComponent(GameObject slicedObject)
     {
-
+        Rigidbody rb = slicedObject.AddComponent<Rigidbody>();
+        MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
+        collider.convex = true;
+        rb.AddExplosionForce(cutForce, slicedObject.transform.position,1);
     }
     
 }
