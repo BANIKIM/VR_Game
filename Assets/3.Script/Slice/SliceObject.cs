@@ -38,7 +38,7 @@ public class SliceObject : MonoBehaviour
         {
             
             GameObject tartget = hit.transform.gameObject;
-            tartget.transform.GetComponent<Enemy>().SodeDead();
+            //tartget.transform.GetComponent<Enemy>().SodeDead();
             
             Slice(tartget);
         }
