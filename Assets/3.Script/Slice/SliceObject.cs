@@ -6,9 +6,12 @@ using UnityEngine.InputSystem;
 
 public class SliceObject : MonoBehaviour
 {
-    public Transform planeDebug;
-    public GameObject target;
-    public bool slice = false; //자를까요?
+
+
+    public Transform startSlicePoint;
+    public Transform endSlicePoint;
+    public VelocityEstimator velocityEstimator;
+    public LayerMask sliceableLayer;
     public Material crossSectionMaterial;
     public float cutForce = 1500;
 
@@ -17,23 +20,45 @@ public class SliceObject : MonoBehaviour
         
     }
 
-    private void Update()
+/*    private void Update()
     {
-        if(slice)
+        bool hasHit = Physics.Linecast(startSlicePoint.position, endSlicePoint.position, out RaycastHit hit, sliceableLayer);
+        if (hasHit)
         {
-            Debug.Log("먼데");
-            Slice(target);
-            slice = false;
+            Debug.Log(hasHit);
+            GameObject tartget = hit.transform.gameObject;
+            Slice(tartget);
+        }
+    }*/
+
+    private void FixedUpdate()
+    {
+        bool hasHit = Physics.Linecast(startSlicePoint.position, endSlicePoint.position, out RaycastHit hit, sliceableLayer);
+        if(hasHit)
+        {
+            
+            GameObject tartget = hit.transform.gameObject;
+            tartget.transform.GetComponent<Enemy>().SodeDead();
+            
+            Slice(tartget);
         }
     }
 
     //자른다
     public void Slice(GameObject target)
     {
-        SlicedHull hull = target.Slice(planeDebug.position, planeDebug.up);
+        Vector3 velocity = velocityEstimator.GetVelocityEstimate();
+        Vector3 planeNormal = Vector3.Cross(endSlicePoint.position - startSlicePoint.position, velocity);
+        planeNormal.Normalize();
 
-        if(hull != null)
+        SlicedHull hull = target.Slice(endSlicePoint.position, planeNormal);
+        Debug.Log("Hull값");
+        Debug.Log(hull);
+        if (hull != null)
         {
+            Debug.Log(hull);
+            Debug.Log("if안");
+
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);//CreateUpperHull(자를오브젝트,단면도 머테리얼)
             SetupSlicedComponent(upperHull);
             GameObject loverHull = hull.CreateLowerHull(target, crossSectionMaterial);//자른 밑부분

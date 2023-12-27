@@ -109,5 +109,20 @@ public class Enemy : MonoBehaviour
         agent.enabled = false;//네비메쉬 비활성화
         this.enabled = false;
     }
-    
+
+
+    public void SodeDead()
+    {
+        foreach (var item in GetComponentsInChildren<Rigidbody>())
+        {
+            item.isKinematic = false;
+        }
+        ThrowGun();
+        animator.enabled = false; //애니메이터 비활성화
+        agent.enabled = false;//네비메쉬 비활성화
+        this.enabled = false;
+
+        Debug.Log("죽어라");
+    }
+
 }
