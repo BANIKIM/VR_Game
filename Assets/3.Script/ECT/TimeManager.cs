@@ -20,7 +20,7 @@ public class TimeManager : MonoBehaviour
     {
         initialFixedDeltaTime = Time.fixedDeltaTime;
     }
-
+    
     private void Update()
     {
         float velocityMagnitude =
