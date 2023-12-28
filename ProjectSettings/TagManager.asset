@@ -9,6 +9,8 @@ TagManager:
   - Weapon
   - Enemy
   - FxTemporaire
+  - Katana
+  - Katana_Hand
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnTriggerEnterDeath : MonoBehaviour
 {
-
+    public bool katana = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +13,24 @@ public class OnTriggerEnterDeath : MonoBehaviour
         if (death != null)
         {
             death.enemy.Dead(transform.position);
+        }
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.CompareTag("Katana_Hand"))
+        {
+            katana = true;
+        }
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Katana_Hand"))
+        {
+            katana = false;
         }
     }
 }
