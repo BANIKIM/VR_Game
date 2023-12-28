@@ -16,14 +16,14 @@ public class OnCollisionEnterDeath : MonoBehaviour
             enemy.Dead(collision.contacts[0].point);
             //collision.contacts[0].point <- 접촉한 첫번째 Point를 가져온다
         }
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag(Katana))
+        if(collision.gameObject.CompareTag(Katana))
         {
-            enemy.Dead(other.transform.position);
+            Debug.Log("카타나카타나");
+            enemy.Dead(collision.contacts[0].point);
         }
     }
+
+    
 
 }

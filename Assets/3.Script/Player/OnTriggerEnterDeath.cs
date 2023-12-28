@@ -19,7 +19,7 @@ public class OnTriggerEnterDeath : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.CompareTag("Katana_Hand"))
+        if(other.gameObject.CompareTag("Katana"))
         {
             katana = true;
         }
@@ -28,7 +28,7 @@ public class OnTriggerEnterDeath : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Katana_Hand"))
+        if (other.gameObject.CompareTag("Katana"))
         {
             katana = false;
         }
