@@ -24,6 +24,14 @@ public class OnCollisionEnterDeath : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag(Katana))
+        {
+            Debug.Log("트리거카타나카타나");
+            enemy.Dead(other.transform.position);
+        }
+    }
+
 
 }

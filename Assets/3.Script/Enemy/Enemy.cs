@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     public Transform playerHead;
     public float stopDistance = 5; // 멈추는 거리
     public FireBulletOnActivate gun;
-
+    public bool Die = false;
 
     private Quaternion localRotationGun;
 
@@ -107,6 +107,7 @@ public class Enemy : MonoBehaviour
         ThrowGun();
         animator.enabled = false; //애니메이터 비활성화
         agent.enabled = false;//네비메쉬 비활성화
+        Die = true;
         this.enabled = false;
     }
 
