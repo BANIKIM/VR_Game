@@ -19,7 +19,6 @@ public class OnCollisionEnterDeath : MonoBehaviour
 
         if(collision.gameObject.CompareTag(Katana))
         {
-            Debug.Log("카타나카타나");
             enemy.Dead(collision.contacts[0].point);
         }
     }
@@ -28,7 +27,6 @@ public class OnCollisionEnterDeath : MonoBehaviour
     {
         if (other.gameObject.CompareTag(Katana))
         {
-            Debug.Log("트리거카타나카타나");
             enemy.Dead(other.transform.position);
         }
     }

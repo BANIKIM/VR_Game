@@ -15,10 +15,6 @@ public class SliceObject : MonoBehaviour
     public Material crossSectionMaterial;
     public float cutForce = 1500;
 
-    private void Start()
-    {
-        
-    }
 
 /*    private void Update()
     {
@@ -52,13 +48,9 @@ public class SliceObject : MonoBehaviour
         planeNormal.Normalize();
 
         SlicedHull hull = target.Slice(pos, planeNormal);
-        Debug.Log("Hull값");
-        Debug.Log(hull);
+   
         if (hull != null)
         {
-            Debug.Log(hull);
-            Debug.Log("if안");
-
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);//CreateUpperHull(자를오브젝트,단면도 머테리얼)
             SetupSlicedComponent(upperHull);
             GameObject loverHull = hull.CreateLowerHull(target, crossSectionMaterial);//자른 밑부분

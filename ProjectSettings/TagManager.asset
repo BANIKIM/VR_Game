@@ -12,6 +12,8 @@ TagManager:
   - Katana
   - Katana_Hand
   - Enemys
+  - UI
+  - start
   layers:
   - Default
   - TransparentFX
