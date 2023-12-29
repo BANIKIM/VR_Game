@@ -23,9 +23,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         
-
-
-
         bool allEnemiesDead = true;
 
         for (int i = 0; i < Enemys.transform.childCount; i++)
@@ -53,8 +50,6 @@ public class GameManager : MonoBehaviour
             Enemys.transform.GetChild(i).gameObject.SetActive(true);
         }
     }
-
-
 
 
     public void Gameover()
