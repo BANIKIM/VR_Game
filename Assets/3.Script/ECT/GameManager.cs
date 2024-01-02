@@ -37,8 +37,7 @@ public class GameManager : MonoBehaviour
         if (allEnemiesDead)
         {
             Gameset = true;
-            Invoke("Gameover", 3f);
-            Debug.Log("게임 종료");
+            Invoke("Gameover", 2f);
         }    
 
     }
