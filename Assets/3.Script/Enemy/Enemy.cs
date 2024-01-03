@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public FireBulletOnActivate gun;
     public bool Die = false;
 
+
     private Quaternion localRotationGun;
 
     void Start()
@@ -103,7 +104,6 @@ public class Enemy : MonoBehaviour
                 rb.AddExplosionForce(1000, hitPosition, 0.3f);
             }
         }
-
         ThrowGun();
         animator.enabled = false; //애니메이터 비활성화
         agent.enabled = false;//네비메쉬 비활성화
