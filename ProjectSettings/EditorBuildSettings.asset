@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1.Scene/SciFi_Warehouse.unity
     guid: 69e59c71622f4b249a331d85e80598b3
+  - enabled: 1
+    path: Assets/1.Scene/LodingScene.unity
+    guid: 7578bd0a17710a04ebaabe9aced3675c
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 548dd1739cd4d4149a338e06e6995cb6, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d4d27e857f9a82644a6e1a132c9bc760, type: 2}

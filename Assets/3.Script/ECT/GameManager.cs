@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject GameSet;
     public bool Gameset = false;
     public TimeManager timeManager;
-
-
+    public GameObject fog;
+    public GameObject end;
 
     private void Start()
     {
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         if (allEnemiesDead)
         {
             Gameset = true;
-            Invoke("Gameover", 2f);
+            Gameover();
         }    
 
     }
@@ -55,9 +55,16 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < GameSet.transform.childCount; i++)
         {
-            GameSet.transform.GetChild(i).gameObject.SetActive(true);
-        }      
-        timeManager.enabled = false;
-        Time.timeScale = 0;
+            //GameSet.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        //timeManager.enabled = false;
+        //Time.timeScale = 0;
+        Endfog();
+    }
+
+    public void Endfog()
+    {
+        fog.SetActive(false);
+        end.SetActive(true);
     }
 }
