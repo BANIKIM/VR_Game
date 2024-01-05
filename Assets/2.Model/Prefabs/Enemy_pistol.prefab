@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4436910063426184099}
   m_Layer: 7
   m_Name: Enemy_pistol
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ca4c020bee4014bb415abb049c4ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2213385983699397486, guid: 220a3968a8fb84045b5927739c9f23d7, type: 3}
+  bullet: {fileID: 3145740224865328762, guid: e0e9245b10008e74cadaa4eab9dce218, type: 3}
   spawnPoint: {fileID: 4436910063624064792}
   fireSpeed: 20
   source: {fileID: 4436910063426184097}
@@ -567,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4436910063624064793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0142, z: 0.0285}
+  m_LocalPosition: {x: 0, y: 0.0142, z: 0.0321}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 220549787009831754}
