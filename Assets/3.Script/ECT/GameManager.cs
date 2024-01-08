@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     public TimeManager timeManager;
     public GameObject fog;
     public GameObject end;
+    public GameObject maincamera;
 
     private void Start()
     {
         timeManager = FindObjectOfType<TimeManager>();
         Enemys = GameObject.FindGameObjectWithTag("Enemys");
+        maincamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     private void Update()
@@ -47,9 +49,22 @@ public class GameManager : MonoBehaviour
         if (allEnemiesDead)
         {
             Gameset = true;
-            Gameover();
-        }    
+            maincamera.transform.GetComponent<Animator>().enabled = true;
+        }
+        if(RenderSettings.fogEndDistance< 50)
+        {
+            maincamera.transform.GetComponent<Animator>().enabled = false;
+            for (int i = 0; i < maincamera.transform.childCount; i++)
+            {
+                maincamera.transform.GetChild(i).gameObject.SetActive(false);
+            }
 
+        }
+
+        if (RenderSettings.fogEndDistance < 5)
+        {
+            LoadingSceneController.LoadScene("SciFi_Warehouse");
+        }
     }
 
     public void SetEnemys() // 적 캐릭터 활성화
@@ -63,9 +78,6 @@ public class GameManager : MonoBehaviour
 
     public void Gameover()
     {
-
-        //timeManager.enabled = false;
-        //Time.timeScale = 0;
         Endfog();
     }
 

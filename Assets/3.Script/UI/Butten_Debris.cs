@@ -5,8 +5,18 @@ using UnityEngine;
 public class Butten_Debris : MonoBehaviour
 {
     public GameObject debris;
-    public Scene_change scene_Change;
+    public GameManager gameManager;
 
+
+    private void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+    private void Update()
+    {
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +24,7 @@ public class Butten_Debris : MonoBehaviour
         {
             transform.gameObject.SetActive(false);
             debris.SetActive(true);
-            LoadingSceneController.LoadScene("SciFi_Warehouse");            
+            gameManager.Endfog();
         }
     }
 }
