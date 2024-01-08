@@ -7,7 +7,6 @@ using TMPro; // TextMeshProUGUI 선언사용
 public class GameManager : MonoBehaviour
 {
     public GameObject Enemys;
-    public GameObject GameSet;
     public bool Gameset = false;
     public TimeManager timeManager;
     public GameObject fog;
@@ -17,7 +16,6 @@ public class GameManager : MonoBehaviour
     {
         timeManager = FindObjectOfType<TimeManager>();
         Enemys = GameObject.FindGameObjectWithTag("Enemys");
-        GameSet = GameObject.FindGameObjectWithTag("UI");
     }
 
     private void Update()
@@ -27,11 +25,23 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < Enemys.transform.childCount; i++)
         {
-            if (!Enemys.transform.GetChild(i).GetComponent<Enemy>().Die)
+            if (Enemys.transform.GetChild(i).GetComponent<Enemy>() == null)
             {
-                allEnemiesDead = false;
-                break;
+                if (!Enemys.transform.GetChild(i).GetComponent<Enemy_Lobby>().Die)
+                {
+                    allEnemiesDead = false;
+                    break;
+                }
             }
+            else
+            {
+                if (!Enemys.transform.GetChild(i).GetComponent<Enemy>().Die)
+                {
+                    allEnemiesDead = false;
+                    break;
+                }
+            }
+
         }
 
         if (allEnemiesDead)
@@ -53,10 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void Gameover()
     {
-        for (int i = 0; i < GameSet.transform.childCount; i++)
-        {
-            //GameSet.transform.GetChild(i).gameObject.SetActive(true);
-        }
+
         //timeManager.enabled = false;
         //Time.timeScale = 0;
         Endfog();
