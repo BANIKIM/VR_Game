@@ -16,6 +16,7 @@ TagManager:
   - start
   - GameManager
   - Gun
+  - Gameset
   layers:
   - Default
   - TransparentFX

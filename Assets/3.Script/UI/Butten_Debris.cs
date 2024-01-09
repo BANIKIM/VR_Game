@@ -13,16 +13,13 @@ public class Butten_Debris : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
-    private void Update()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Left Hand") || other.gameObject.CompareTag("Right Hand"))
         {
-            transform.gameObject.SetActive(false);
+            transform.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            transform.gameObject.GetComponent<BoxCollider>().enabled = false;
             debris.SetActive(true);
             gameManager.Endfog();
         }

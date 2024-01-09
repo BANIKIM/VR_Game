@@ -8,14 +8,12 @@ public class Enemy_Lobby : MonoBehaviour
 
     public Animator animator;
     public bool Die = false;
-    public GameObject Start_UI;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         SetupRagdoll();
-        Start_UI = GameObject.FindGameObjectWithTag("UI");
     }
 
     private void Update()
@@ -52,7 +50,6 @@ public class Enemy_Lobby : MonoBehaviour
 
         animator.enabled = false; //애니메이터 비활성화
         Die = true;
-        Start_UI.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         this.enabled = false;
     }
 }

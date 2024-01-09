@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 8874279342243570969}
   m_Layer: 7
   m_Name: pistol
-  m_TagString: Weapon
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,8 +229,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.04, z: 0.05}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.01, y: 0.04, z: 0.046853445}
+  m_Center: {x: 0, y: 0, z: -0.0015732758}
 --- !u!82 &8874279342243570974
 AudioSource:
   m_ObjectHideFlags: 0

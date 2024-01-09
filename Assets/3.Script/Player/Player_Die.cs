@@ -21,7 +21,7 @@ public class Player_Die : MonoBehaviour
         {
             gameManager.Endfog();
             Destroy(other);
-            if (RenderSettings.fogEndDistance<5)
+            if (RenderSettings.fogEndDistance<20)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
