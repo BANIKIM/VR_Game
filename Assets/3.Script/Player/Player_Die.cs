@@ -17,14 +17,21 @@ public class Player_Die : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Weapon"))
+        if (other.gameObject.CompareTag("Weapon"))
         {
             gameManager.Endfog();
             Destroy(other);
-            if (RenderSettings.fogEndDistance<20)
+            if (RenderSettings.fogEndDistance < 20)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+        if (other.gameObject.CompareTag("EnemyArm_L"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        }
     }
+
+
 }

@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Å¬¸®¾î");
+                LoadingSceneController.LoadScene("Stage1");
             }
 
         }

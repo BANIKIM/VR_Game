@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public float stopDistance = 5; // 멈추는 거리
     public FireBulletOnActivate gun;
     public bool Die = false;
-
+    public bool isgun;
 
     private Quaternion localRotationGun;
 
@@ -33,22 +33,35 @@ public class Enemy : MonoBehaviour
 
         //거리 계산
         float distance = Vector3.Distance(playerTarget.position, transform.position);
-        if(distance<stopDistance)
+        if(distance<stopDistance)//거리가 되면 공격하게 
         {
             agent.isStopped = true;
             //isStopped 네비메쉬 에이전트 일시정지
-            animator.SetBool("Shoot", true);
+            if (isgun)
+            {
+                animator.SetBool("Gun", true);
+                animator.SetBool("Shoot", true);//총일시
+            }
+            else if(!isgun)
+            {
+                animator.SetBool("Shoot", true);//총일시
+            }
+        }
+        else // 거리가 멀어지면 다시 따라옴
+        {
+            agent.isStopped = false;
+            animator.SetBool("Shoot",false);//공격모션 중지
         }
     }
 
-    //총던지기, 죽을때 총 놓치기
+    //무기던지기, 죽을때 무기 놓치기
     public void ThrowGun()
     {
         gun.spawnPoint.localRotation = localRotationGun;
 
         gun.transform.parent = null;
         Rigidbody rb = gun.GetComponent<Rigidbody>();
-        rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 45);
+        rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 40);
         rb.angularVelocity = Vector3.zero;
     }
 

@@ -20,6 +20,7 @@ public class Butten_Debris : MonoBehaviour
         {
             transform.gameObject.GetComponent<MeshRenderer>().enabled = false;
             transform.gameObject.GetComponent<BoxCollider>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
             debris.SetActive(true);
             gameManager.Endfog();
         }
