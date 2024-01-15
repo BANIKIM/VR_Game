@@ -26,7 +26,7 @@ public class Player_Die : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-        if (other.gameObject.CompareTag("EnemyArm_L"))
+        if (other.gameObject.CompareTag("EnemyArm_L")) //¿Þ¼Õ ÆÝÄ¡¿¡ ¸Â¾ÒÀ»¶§ Á×´Â°Å 
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 

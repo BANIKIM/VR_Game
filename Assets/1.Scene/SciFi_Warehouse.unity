@@ -49970,7 +49970,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   playerTarget: {fileID: 2118797415}
   playerHead: {fileID: 1704861018}
-  stopDistance: 1.5
+  stopDistance: 1.3
   gun: {fileID: 6687726512706265506}
   Die: 0
   isgun: 0
@@ -50188,7 +50188,7 @@ GameObject:
   - component: {fileID: 5933073084884125390}
   m_Layer: 0
   m_Name: LowManLeftForeArm
-  m_TagString: Enemy
+  m_TagString: EnemyArm_L
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
